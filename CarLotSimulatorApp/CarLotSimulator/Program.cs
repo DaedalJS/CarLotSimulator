@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 
 namespace CarLotSimulator
 {
@@ -13,8 +14,39 @@ namespace CarLotSimulator
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
 
-
             //Now that the Car class is created we can instanciate 3 new cars
+            Car a = new Car(2020, "Ford", "Mustang", "cha kuh cha kuh cha k'PoW CLUG CLug clug ... clug ... clug  pshhhhhhh", "meeep meep", false);
+            Car b = new Car()
+            {
+                Year = 2019,
+                Make = "Dodge",
+                Model = "Viper",
+                EngineNoise = "VroOOOOOOOooom",
+                HonkNoise = "AAAOOOOHHGAH",
+                IsDrivable = true
+            };
+            Car c = new Car();
+            c.Year = 2018;
+            c.Make = "Tesla";
+            c.Model = "Roadster";
+            c.EngineNoise = "friend 1: is this thing cranked?";
+            c.HonkNoise = "BeeP";
+            c.IsDrivable = true;
+
+            Console.WriteLine(a.Model);
+            a.makeEngineNoise();
+            a.makeHonkNoise();
+            Console.WriteLine("\n");
+            Console.WriteLine(a.Model);
+            b.makeEngineNoise();
+            b.makeHonkNoise();
+            Console.WriteLine("\n");
+
+            Console.WriteLine(a.Model);
+            c.makeEngineNoise();
+            c.makeHonkNoise();
+            Console.WriteLine("\n");
+
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
