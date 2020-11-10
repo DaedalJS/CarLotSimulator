@@ -5,7 +5,10 @@ using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace CarLotSimulator
-{
+{   public static class CarLot 
+    {
+        public static int numberOfCars = 0;
+    }
     public class Car
     {
         public int Year { get; set; }
@@ -16,7 +19,7 @@ namespace CarLotSimulator
         public bool IsDrivable { get; set; }
         public Car()
         {
-
+            CarLot.numberOfCars++;
         }
 
 
@@ -28,6 +31,7 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
             IsDrivable = isDriveable;
+            CarLot.numberOfCars++;
         }
          
         public void makeEngineNoise() 

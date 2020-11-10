@@ -2,7 +2,8 @@
 using System.Net.Http;
 
 namespace CarLotSimulator
-{
+{   
+    
     class Program
     {
         static void Main(string[] args)
@@ -15,7 +16,12 @@ namespace CarLotSimulator
             //The methods should take one string parameter: the respective noise property
 
             //Now that the Car class is created we can instanciate 3 new cars
+            Console.WriteLine($"{CarLot.numberOfCars} cars on lot.");
+
             Car a = new Car(2020, "Ford", "Mustang", "cha kuh cha kuh cha k'PoW CLUG CLug clug ... clug ... clug  pshhhhhhh", "meeep meep", false);
+
+            Console.WriteLine($"{CarLot.numberOfCars} cars on lot.");
+
             Car b = new Car()
             {
                 Year = 2019,
@@ -25,6 +31,9 @@ namespace CarLotSimulator
                 HonkNoise = "AAAOOOOHHGAH",
                 IsDrivable = true
             };
+
+            Console.WriteLine($"{CarLot.numberOfCars} cars on lot.");
+
             Car c = new Car();
             c.Year = 2018;
             c.Make = "Tesla";
@@ -32,6 +41,8 @@ namespace CarLotSimulator
             c.EngineNoise = "friend 1: is this thing cranked?";
             c.HonkNoise = "BeeP";
             c.IsDrivable = true;
+
+            Console.WriteLine($"{CarLot.numberOfCars} cars on lot.");
 
             Console.WriteLine(a.Model);
             a.makeEngineNoise();
